@@ -26,9 +26,23 @@ public class GooglePlay
         productos.add(product);
     }
     
-    public void comprar(String correo, String nombre){
-        usuarios.add(new Usuario(correo));
-        productos.add(new Producto(nombre));
+    public int comprar(String correo, String nombre){
+        int importe;
+        for(Usuario usu : usuarios){
+            if(usu.getNombreCuenta() != correo){
+                importe = -1;
+            }
+            else{
+                for(Producto prod : productos){
+                    if(prod.getNombre() != nombre){
+                        importe = -1;
+                    }
+                    else{
+                        importe = prod.
+                    }
+                }
+            }
+        }
     }
 
     public int getNumeroUsuarios(){

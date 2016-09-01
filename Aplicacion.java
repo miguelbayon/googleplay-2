@@ -27,4 +27,21 @@ public class Aplicacion extends Producto
     public String getCategoria(){
         return cat.getString();
     }
-}
+    
+    @Override
+    public float getPrecio(){
+        float precioI = 0.99F;
+        if(super.getVecesQueSeHaVendidoElProducto() > 2){
+            if(cat.getString().equals("Juego")){ 
+                precioI = 5.00F;
+            }
+            else if(cat.getString().equals("Productividad")){
+                precioI = 10.00F;
+            }
+            else{
+                precioI = 2.00F;
+            }
+            }
+        return precioI;
+        }
+    }
