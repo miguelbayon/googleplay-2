@@ -28,4 +28,15 @@ public class Libro extends ProductoMultimedia
     public boolean getFiccion(){
         return ficcion;
     }
+    
+    @Override
+    public float getPrecio(){
+        int numeroDeAnnPasados = 2010 - super.getAno();
+        if(numeroDeAnnPasados < 0){
+            numeroDeAnnPasados = -numeroDeAnnPasados;
+        }
+        float precioDelLibro = (numeroDePaginas/100) * numeroDeAnnPasados;
+        
+        return precioDelLibro;
+    }
 }   

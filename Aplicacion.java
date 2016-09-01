@@ -31,7 +31,6 @@ public class Aplicacion extends Producto
     @Override
     public float getPrecio(){
         float precioI = 0.99F;
-        if(super.getVecesQueSeHaVendidoElProducto() > 2){
             if(cat.getString().equals("Juego")){ 
                 precioI = 5.00F;
             }
@@ -40,7 +39,6 @@ public class Aplicacion extends Producto
             }
             else{
                 precioI = 2.00F;
-            }
             }
         return precioI;
         }

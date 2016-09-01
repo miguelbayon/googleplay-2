@@ -31,4 +31,16 @@ public class Pelicula extends ProductoMultimedia
         }
         return fullHD;
     }
+    
+    @Override
+    public float getPrecio(){
+        float precioI = 5.00F;
+        if(hd == 1080){
+            precioI = 10.00F;
+        }
+        if(super.getAno() < 2000){
+                precioI = precioI * 0.50F;
+            }
+        return precioI;
+    }
 }
