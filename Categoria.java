@@ -7,6 +7,15 @@
  */
 public enum Categoria
 {
-    JUEGOS, COMUNICACIONES, PRODUCTIVIDAD, MULTIMEDIA;
+    JUEGOS("Juegos"), COMUNICACIONES("Comunicaciones"), PRODUCTIVIDAD("Productividad"), MULTIMEDIA("Multimedia");
     
+    private String categoriaString;
+    
+    Categoria(String cadena){
+        categoriaString = cadena;
+    }
+    
+    public String getString(){
+        return categoriaString;
+    }
 }

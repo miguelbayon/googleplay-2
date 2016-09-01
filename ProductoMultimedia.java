@@ -7,7 +7,6 @@
  */
 public class ProductoMultimedia extends Producto
 {
-    private String titulo;
     private int anni;
 
     /**
@@ -15,12 +14,12 @@ public class ProductoMultimedia extends Producto
      */
     public ProductoMultimedia(String titulo, int anni)
     {
-        titulo = this.titulo;
-        anni = this.anni;
+        super(titulo);
+        this.anni = anni;
     }
-
+    
     public String getTitulo(){
-        return titulo;
+        return super.getNombre();
     }
     
     public int getAno(){

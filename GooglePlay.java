@@ -22,8 +22,13 @@ public class GooglePlay
         usuarios.add(usuario);
     }
     
-    public void addProducto(Producto producto){
-        productos.add(producto);
+    public void addProducto(Producto product){
+        productos.add(product);
+    }
+    
+    public void comprar(String correo, String nombre){
+        usuarios.add(new Usuario(correo));
+        productos.add(new Producto(nombre));
     }
 
     public int getNumeroUsuarios(){

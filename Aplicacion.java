@@ -7,7 +7,6 @@ import java.util.ArrayList;
  */
 public class Aplicacion extends Producto 
 {
-    private String nombre;
     private float mb; //parámetro que nos indica cuántos MB ocupa la aplicación
     private Categoria cat; //cada aplicación podrá ser de una de estas cuatro categorías : juegos, comunicación, productividad o multimedia.
 
@@ -16,20 +15,16 @@ public class Aplicacion extends Producto
      */
     public Aplicacion(String nombre, float megas, Categoria categoria)
     {
-        nombre = this.nombre;
+        super(nombre);
         mb = megas;
         cat = categoria;
-    }
-    
-    public String getNombre(){
-        return nombre;
     }
 
     public float getTamanoEnMB(){
         return mb;
     }
     
-    public Categoria getCategoria(){
-        return cat;
+    public String getCategoria(){
+        return cat.getString();
     }
 }

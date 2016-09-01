@@ -17,14 +17,18 @@ public class Pelicula extends ProductoMultimedia
     {
         super(titulo, ann);
         duracion = dura;
-        hd = this.hd;
+        this.hd = hd;
     }
 
     public int getDuracion(){
         return duracion;
     }
     
-    public int getCalidad(){
-        return hd;
+    public String getCalidad(){
+        String fullHD = "FullHD";
+        if(hd != 1080){
+            fullHD = "HD";
+        }
+        return fullHD;
     }
 }

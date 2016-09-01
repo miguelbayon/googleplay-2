@@ -7,6 +7,7 @@
  */
 public class Libro extends ProductoMultimedia
 {
+    private String titulo;
     private int numeroDePaginas;
     private boolean ficcion; //cuando este atributo vale true significa que el libro es de ficción, si vale false
                              //significa que no es de ficción.
@@ -17,7 +18,7 @@ public class Libro extends ProductoMultimedia
     {
         super(titulo, anni);
         numeroDePaginas = numPag;
-        ficcion = this.ficcion;
+        this.ficcion = ficcion;
     }
     
     public int getNumeroPaginas(){
